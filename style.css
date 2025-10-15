@@ -29,8 +29,8 @@ img {
   height: 400px;
   width: 400px;
 
-  background-color: hsl(277, 64%, 61%);
-  background-blend-mode: overlay;
+  /* background-color: hsl(277, 64%, 61%);
+  background-blend-mode: overlay; */
 }
 .left-page {
   padding-top: 70px;
@@ -60,10 +60,18 @@ p {
 h5 {
   color: hsla(0, 0%, 100%, 0.6);
 }
-/* img::after {
+.image {
+  position: relative;
+  display: inline-block;
+}
+.image::before {
   content: "";
   position: absolute;
-  background-color: hsl(277, 64%, 61%);
-inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(277, 64%, 61%);
+  pointer-events: none;
   opacity: 0.5;
-} */
+}
